@@ -10,13 +10,13 @@ I don’t wear a cape, but I do wear a lot of hats—**Threat Hunter, Incident R
 
 My mission? To help secure the digital world, one system at a time, while keeping things interesting with creative solutions. When I’m not diving deep into security challenges, you’ll find me grabbing a bite, binge-watching the latest web series, or hitting the gym to keep my mind and body in shape.
 
-**Looking for a Cyber Detective? Let’s connect!**
+_**Looking for a Cyber Detective? Let’s connect!**_
 
 ---
 
 ## 🛠️ Utility Belt: Skills
 
-Want to know what gadgets I’ve got in my Cyber Detective utility belt? Here's a look at the tools and skills I use to defend the digital world.
+_Want to know what gadgets I’ve got in my Cyber Detective utility belt? Here's a look at the tools and skills I use to defend the digital world._
 
 ### Languages & Operating Systems:
 - **Languages:** C, Java, Python, SQL  
@@ -30,7 +30,7 @@ Want to know what gadgets I’ve got in my Cyber Detective utility belt? Here's 
 
 ## 🔍 Case Files: Projects
 
-A detective is only as good as their cases. Here’s a glimpse at the investigations I’ve tackled:
+_A detective is only as good as their cases. Here’s a glimpse at the investigations I’ve tackled:_
 
 ### **Legal Compliance Analysis for Breach Remediation** (Oct 2024 – Dec 2024)
 - Analyzed a simulated data breach, identifying non-compliance with **HIPAA, PCI DSS, GDPR, GLBA, and NYDFS**.
@@ -47,7 +47,7 @@ A detective is only as good as their cases. Here’s a glimpse at the investigat
 ---
 ## 📜 Certifications & Challenges
 
-A detective never stops sharpening their skills. Here’s what I’ve achieved:
+_A detective never stops sharpening their skills. Here’s what I’ve achieved:_
 
 ### Certifications:
 - **CompTIA Security+ (SY0-701)** *(Aug 2024)* – Credential ID: BBYQNNMZGER4Q89Y
@@ -62,7 +62,7 @@ A detective never stops sharpening their skills. Here’s what I’ve achieved:
 
 ## 🎓 Training the Next Cyber Defenders
 
-When I’m not solving cybersecurity puzzles, I’m helping others sharpen their skills.
+_When I’m not solving cybersecurity puzzles, I’m helping others sharpen their skills._
 
 ### **Teaching Assistant – Introduction to Cybersecurity** (Jan 2025 – Present)
 - Assist students with **network security, risk management, and system defense techniques**.
@@ -76,7 +76,7 @@ When I’m not solving cybersecurity puzzles, I’m helping others sharpen their
 
 ## 🏢 Defending the Digital Frontier - Work Experience
 
-From classrooms to corporate battlefields, I’ve been on the frontlines making sure the digital world stays secure. Here’s how I’ve contributed:
+_From classrooms to corporate battlefields, I’ve been on the frontlines making sure the digital world stays secure. Here’s how I’ve contributed:_
 
 ### **Cognizant Technology Solutions** – Associate *(Jan 2023 – Aug 2023)*
 - Automated API testing workflows using **Selenium**, reducing testing time by **30%**.
@@ -93,7 +93,7 @@ From classrooms to corporate battlefields, I’ve been on the frontlines making 
 
 ## 📬 Connect With Me
 
-Want to team up on a cybersecurity case or just chat tech? Here’s where you can find me:
+_Want to team up on a cybersecurity case or just chat tech? Here’s where you can find me:_
 
 - **LinkedIn:** [Vijayavarman Harikrishnan](https://www.linkedin.com/in/vijayavarman-harikrishnan/)
 - **Hack The Box:** [HTB Profile](#)
