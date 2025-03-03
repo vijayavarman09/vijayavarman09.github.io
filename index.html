@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vijayavarman's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light" id="theme-toggle">🌙</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Home Section -->
+<section id="home" class="container text-left py-5">
+    <div class="row" style="margin-left: 5%; margin-right: 5%;">
+        <div class="col-md-6">
+            <h1>Hi, I'm<br><strong><span id="name"></span><span id="cursor">|</span></strong></h1>
+            <h3 class="batcave-intro">Welcome to my Batcave!</h3>
+            <p>By day, I'm a Cybersecurity grad student at RIT. By night, I track down vulnerabilities and secure systems.</p>
+            
+            <div class="d-flex align-items-center">
+                <a href="Vijayavarman-Resume.pdf" target="_blank">
+                    <button class="btn btn-primary btn-sm me-3">Resume</button>
+                </a>                
+                <div id="social-icons" class="social-icons">
+                    <a href="mailto:vijayavarmanah@gmail.com" target="_blank" class="mx-2">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vijayavarman-harikrishnan/" target="_blank" class="mx-2">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/vijayavarman09/" target="_blank" class="mx-2">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://tryhackme.com/p/CyBeRkNiGhT72" target="_blank" class="mx-2">
+                        <img src="thm-icon.svg" alt="TryHackMe">
+                    </a>
+                    <a href="https://ctf.hackthebox.com/user/profile/623749" target="_blank" class="mx-2">
+                        <img src="htb-icon.svg" alt="Hack The Box">
+                    </a>
+                    <a href="https://www.credly.com/users/vijayavarman-arunasalam-harikrishnan" target="_blank" class="mx-2">
+                        <i class="fa-solid fa-medal"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Image Section: Place the image in a separate div -->
+        <div class="col-md-6">
+            <div id="image-container" class="d-flex justify-content-end">
+                <img src="batman.jpeg" alt="Vijayavarman" class="img-fluid rounded-3">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Bat Flying Animation Container -->
+<div id="bat-fly-container"></div>
+
+<!-- About Section -->
+<section id="about" class="container py-5">
+    <div class="row align-items-center" style="margin-left: 5%; margin-right: 5%;">
+        <div class="col-md-4 d-flex justify-content-center">
+            <img src="About-Me.jpeg" alt="Vijayavarman" class="about-img">
+        </div>
+        <div class="col-md-8">
+            <h2 class="text-center text-md-left">About Me</h2>
+            <p><span class="highlight">I’m Vijayavarman – A hardworking Cyber Detective.</span> By day, I’m a Cybersecurity grad student at RIT, learning the latest tricks to protect the virtual streets of the online world. By night, I’m lurking in the shadows, tracking down vulnerabilities, always ready to strike and patch up any weakness before it’s exploited.</p>
+            <p>I don’t wear a cape, but I do wear a lot of hats—<span class="highlight">Threat Hunter, Incident Responder, and Cybersecurity Analyst</span>, always ready to defend the cyber landscape. I’m a problem solver at heart, and no puzzle is too complex when it comes to securing systems.</p>
+            <p><span class="highlight">My mission?</span> To help secure the digital world, one system at a time, while keeping things interesting with creative solutions.</p>
+            <p class="text-center text-md-left">
+                <strong>Looking for a Cyber Detective? 
+                <a href="#home" class="connect-link">Let’s connect!</a></strong>
+              </p>
+              
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Skills Section -->
+<section id="skills">
+    <div class="container">
+        <h2>Skills</h2>
+        <p class="skills-intro">
+            <em>Want to know what gadgets I’ve got in my Cyber Detective utility belt? Here’s a look at the tools and skills I use to defend the digital world.</em>
+        </p>
+
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3><strong>Languages</strong></h3>
+                <ul>
+                    <li>C</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3><strong>Operating Systems</strong></h3>
+                <ul>
+                    <li>Windows</li>
+                    <li>Linux (Ubuntu, Kali Linux)</li>
+                    <li>Windows Server 2019</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3><strong>Security Tools</strong></h3>
+                <ul class="two-column-list">
+                    <li>Wireshark</li>
+                    <li>Nmap</li>
+                    <li>Metasploit</li>
+                    <li>Burp Suite</li>
+                    <li>Snort</li>
+                    <li>Wazuh</li>
+                    <li>FTK Imager</li>
+                    <li>Autopsy</li>
+                    <li>Cisco Packet Tracer</li>
+                    <li>John the Ripper</li>
+                    <li>Hydra</li>
+                    <li>Maltego</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3><strong>Frameworks</strong></h3>
+                <ul>
+                    <li>NIST Cybersecurity Framework (CSF)</li>
+                    <li>NIST Risk Management Framework (RMF)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  
+
+<!-- Certifications Section -->
+<section id="certifications" class="container py-5">
+    <h2 class="text-center">Certifications</h2>
+    <p class="text-center certifications-intro">
+        A detective never stops sharpening their skills. Here’s what I’ve achieved:
+    </p>
+    <div class="row certifications-grid">
+        <!-- Certificate Tiles -->
+        <div class="col-md-3">
+            <div class="certificate-tile">
+                <h4>CompTIA Security+ (SY0-701)</h4>
+                <div class="icons">
+                    <a href="certificates/Security+.png" target="_blank">
+                        <img src="certificate-icon.svg" alt="Certificate" class="icon">
+                    </a>
+                    <a href="http://verify.CompTIA.org" target="_blank">
+                        <img src="link-icon.svg" alt="Verify" class="link-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="certificate-tile">
+                <h4>SC-900: Microsoft Security, Compliance, and Identity Fundamentals</h4>
+                <div class="icons">
+                    <a href="certificates/SC-900.png" target="_blank">
+                        <img src="certificate-icon.svg" alt="Certificate" class="icon">
+                    </a>
+                    <a href="certificates/SC-900-Certificate.pdf" target="_blank">
+                        <img src="link-icon.svg" alt="Verify" class="link-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="certificate-tile">
+                <h4>AZ-900: Microsoft Azure Fundamentals</h4>
+                <div class="icons">
+                    <a href="certificates/AZ-900.png" target="_blank">
+                        <img src="certificate-icon.svg" alt="Certificate" class="icon">
+                    </a>
+                    <a href="certificates/AZ-900-Certificate.pdf" target="_blank">
+                        <img src="link-icon.svg" alt="Verify" class="link-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="certificate-tile">
+                <h4>Google Cybersecurity Certificate</h4>
+                <div class="icons">
+                    <a href="certificates/Google-Cert.png" target="_blank">
+                        <img src="certificate-icon.svg" alt="Certificate" class="icon">
+                    </a>
+                    <a href="https://coursera.org/verify/professional-cert/U85CGXN0PERL" target="_blank">
+                        <img src="link-icon.svg" alt="Verify" class="link-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="certificate-tile">
+                <h4>Fortinet Certified Fundamentals - In Progress</h4>
+                <div class="icons">
+                    <a href="certificate-link.jpg" target="_blank">
+                        <img src="certificate-icon.svg" alt="Certificate" class="icon">
+                    </a>
+                    <a href="verification-link" target="_blank">
+                        <img src="link-icon.svg" alt="Verify" class="link-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="certificate-tile">
+                <h4>Fortinet Certified Associate - In Progress</h4>
+                <div class="icons">
+                    <a href="certificate-link.jpg" target="_blank">
+                        <img src="certificate-icon.svg" alt="Certificate" class="icon">
+                    </a>
+                    <a href="verification-link" target="_blank">
+                        <img src="link-icon.svg" alt="Verify" class="link-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="certificate-tile">
+                <h4>Introduction to Cybersecurity: Cisco Networking Academy</h4>
+                <div class="icons">
+                    <a href="certificates/cisco.png" target="_blank">
+                        <img src="certificate-icon.svg" alt="Certificate" class="icon">
+                    </a>
+                    <a href="certificates/Intro to Cybersecurity-Cisco.pdf" target="_blank">
+                        <img src="link-icon.svg" alt="Verify" class="link-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="certificate-tile">
+                <h4>Ethical Hacking from Scratch: Zsecurity</h4>
+                <div class="icons">
+                    <a href="certificates/Zsecurity.png" target="_blank">
+                        <img src="certificate-icon.svg" alt="Certificate" class="icon">
+                    </a>
+                    <a href="https://zsecurity.org/certification/validation/" target="_blank">
+                        <img src="link-icon.svg" alt="Verify" class="link-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="projects">
+    <h2>Projects</h2>
+    <p>A detective is only as good as their cases. Here’s a glimpse at the investigations I’ve tackled:</p>
+  
+    <div class="project-cards">
+      <!-- Project Card 1 -->
+      <div class="project-card" onclick="window.open('projects/Enhancing Digital Twin Security Through Partial Homomorphic Encryption.pdf', '_blank')">
+        <div class="project-card-inner">
+          <div class="project-card-front">
+            <h3>Enhancing Digital Twin Security through Partial Homomorphic Encryption</h3>
+            <p>Implemented the ElGamal cryptosystem to secure Digital Twin data while allowing secure computations.</p>
+          </div>
+          <div class="project-card-back">
+            <h4>Mission Brief:</h4>
+            <p>Built a proof-of-concept model integrating MATLAB and Jupyter Notebook for secure computations.</p>
+            <i class="fa-solid fa-file pdf-icon"></i>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project Card 2 -->
+      <div class="project-card" onclick="window.open('projects/The Quantum Periodic Cipher Merging Elements and Quantum Numbers for Covert Channel.pdf', '_blank')">
+        <div class="project-card-inner">
+          <div class="project-card-front">
+            <h3>The Quantum Periodic Cipher: Merging Elements and Quantum Numbers for Covert Channel</h3>
+            <p>A covert communication method encoding messages in Reddit posts using elemental substitution and quantum numbers.</p>
+          </div>
+          <div class="project-card-back">
+            <h4>Mission Brief:</h4>
+            <p>The system hides messages within chemistry-related discussions, leveraging automation to post securely while avoiding detection.</p>
+            <i class="fa-solid fa-file pdf-icon"></i>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project Card 3 -->
+      <div class="project-card" onclick="window.open('projects/Legal Compliance Analysis for Breach Remediation.pdf', '_blank')">
+        <div class="project-card-inner">
+          <div class="project-card-front">
+            <h3>Legal Compliance Analysis for Breach Remediation</h3>
+            <p>Analyzed a simulated data breach, identifying non-compliance with HIPAA, PCI DSS, GDPR, GLBA, and NYDFS.</p>
+          </div>
+          <div class="project-card-back">
+            <h4>Mission Brief:</h4>
+            <p>Applied the NIST Cybersecurity Framework (CSF) to propose actionable remediation strategies.</p>
+            <i class="fa-solid fa-file pdf-icon"></i>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project Card 4 -->
+      <div class="project-card" onclick="window.open('projects/IDOTS+ Enhancing IoTDots for Smart Environments.pdf', '_blank')">
+        <div class="project-card-inner">
+          <div class="project-card-front">
+            <h3>IDOTS+: Enhancing IoTDots for Smart Environments</h3>
+            <p>Developed an IoT forensics framework using CNNs to detect malicious activity in smart home environments.</p>
+          </div>
+          <div class="project-card-back">
+            <h4>Mission Brief:</h4>
+            <p>Achieved 89% accuracy in identifying threats using the OpenHAB platform.</p>
+            <i class="fa-solid fa-file pdf-icon"></i>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project Card 5 -->
+      <div class="project-card" onclick="window.open('projects/Surveying the Role of Machine Learning in Modern Digital Forensics Practices.pdf', '_blank')">
+        <div class="project-card-inner">
+          <div class="project-card-front">
+            <h3>Surveying the Role of Machine Learning in Modern Digital Forensics Practices</h3>
+            <p>Addressed challenges in digital forensics, including data volume, network unpredictability, and encryption, by integrating ML techniques.</p>
+          </div>
+          <div class="project-card-back">
+            <h4>Mission Brief:</h4>
+            <p>Applied ML models like SVM, k-NN, and Naïve Bayes to enhance classification, anomaly detection, and real-time threat identification across various forensic domains.</p>
+            <i class="fa-solid fa-file pdf-icon"></i>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project Card 6 -->
+      <div class="project-card" onclick="window.open('projects/Attack and Defend Exercise Report.pdf', '_blank')">
+        <div class="project-card-inner">
+          <div class="project-card-front">
+            <h3>Attack-Defense Exercise: Securing a Corporate Infrastructure</h3>
+            <p>Built a corporate infrastructure with web, FTP, and Active Directory, conducting attacks and logging intrusions.</p>
+          </div>
+          <div class="project-card-back">
+            <h4>Mission Brief:</h4>
+            <p>Exploited vulnerabilities like EternalBlue and BlueKeep, using Wazuh IDS for detection and mitigation.</p>
+            <i class="fa-solid fa-file pdf-icon"></i>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project Card 7 -->
+      <div class="project-card" onclick="window.open('projects/The Role of Cryptocurrency in Modern Social Engineering Attacks.pdf', '_blank')">
+        <div class="project-card-inner">
+          <div class="project-card-front">
+            <h3>The Role of Cryptocurrency in Modern Social Engineering Attacks</h3>
+            <p>Investigated five major cryptocurrency scams, analyzing how anonymity and decentralization enabled fraud.</p>
+          </div>
+          <div class="project-card-back">
+            <h4>Mission Brief:</h4>
+            <p>Applied Cialdini’s Influence Principles to uncover social engineering tactics and proposed security improvements.</p>
+            <i class="fa-solid fa-file pdf-icon"></i>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project Card 8 -->
+      <div class="project-card" onclick="window.open('projects/Detecting Deepfakes with Machine Learning.pdf', '_blank')">
+        <div class="project-card-inner">
+          <div class="project-card-front">
+            <h3>Detecting Deepfakes with Machine Learning</h3>
+            <p>Developed a deep learning model using CNNs to detect Deepfake content utilizing spatiotemporal analysis and feature extraction.</p>
+          </div>
+          <div class="project-card-back">
+            <h4>Mission Brief:</h4>
+            <p>Achieved 83.9% accuracy in detecting fake images and videos by analyzing facial features and inconsistencies over time.</p>
+            <i class="fa-solid fa-file pdf-icon"></i>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+
+
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <p>From classrooms to corporate battlefields, I’ve been on the frontlines making sure the digital world stays secure. Here’s how I’ve contributed:</p>
+    
+    <div class="experience-container">
+        <!-- Work Experience Timeline -->
+        <div class="timeline work-timeline">
+            <h3>Work Experience</h3>
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                <div class="timeline-content">
+                    <h4>Associate - Cognizant Technology Solutions</h4>
+                    <span>Jan 2023 – Aug 2023</span>
+                    <ul>
+                        <li>Automated API testing workflows using Selenium, reducing testing time by 30%.</li>
+                        <li>Mentored 5+ team members, enhancing overall productivity.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                <div class="timeline-content">
+                    <h4>Programmer Analyst - Cognizant Technology Solutions</h4>
+                    <span>Nov 2021 – Dec 2022</span>
+                    <ul>
+                        <li>Developed and executed 50+ test cases (manual & automated) per release using Selenium in Eclipse IDE.</li>
+                        <li>Collaborated with cross-functional teams to resolve critical defects.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                <div class="timeline-content">
+                    <h4>Programmer Analyst Trainee - Cognizant Technology Solutions</h4>
+                    <span>Nov 2020 – Nov 2021</span>
+                    <ul>
+                        <li>Contributed to 3+ mini-projects utilizing Selenium, TestNG, and JUnit, gaining real-time experience.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Teaching Experience Timeline -->
+        <div class="timeline teaching-timeline">
+            <h3>Academic Experience</h3>
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                <div class="timeline-content">
+                    <h4>Teaching Assistant – Introduction to Cybersecurity</h4>
+                    <span>Jan 2025 – Present</span>
+                    <ul>
+                        <li>Assist students with network security, risk management, and system defense techniques.</li>
+                        <li>Provide feedback to 50+ students on access controls, compliance laws, and cybersecurity principles.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                <div class="timeline-content">
+                    <h4>Teaching Assistant – Cryptography and Authentication</h4>
+                    <span>Aug 2024 – Dec 2024</span>
+                    <ul>
+                        <li>Designed 4 assignments on cryptographic concepts like Substitution Cipher, RC4, AC-5, and MD5.</li>
+                        <li>Evaluated assignments, ensuring secure coding practices and correct implementation.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  
+
+    <footer class="text-center py-3">
+        <p>© 2025 Vijayavarman Arunasalam Harikrishnan. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

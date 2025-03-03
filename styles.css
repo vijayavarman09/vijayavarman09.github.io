@@ -1,0 +1,1017 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 60px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+  
+}
+
+
+/* Navbar */
+.navbar {
+  background-color: #171717;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;  /* Centers the navbar items */
+  align-items: center;      /* Ensures the items are vertically centered */
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;  /* Centers the navbar links */
+  gap: 20px;                /* Adjusts the spacing between the links */
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  font-size: 1.1em;
+  padding: 10px 15px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+.dark-theme .navbar-nav .nav-link:hover {
+  color: #f8c53f;
+}
+
+#theme-toggle {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+
+/* Home Section */
+#home {
+  margin-top: 150px;
+  text-align: left;
+  padding: 50px 0;
+}
+
+/* Fix spacing issue */
+#home h1 {
+  margin-bottom: 20px; /* Adjusts spacing to be even */
+}
+
+/* Fix spacing issue */
+#home h3 {
+  margin-bottom: 20px; /* Adjusts spacing to be even */
+}
+
+/* Fix spacing issue */
+#home p {
+  margin-bottom: 30px; /* Adjusts spacing to be even */
+}
+
+/* Cursor animation */
+#home #cursor {
+  display: inline-block;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Social Icons */
+#home .social-icons {
+  display: flex;
+  align-items: center;
+}
+
+/* Increase icon size */
+#home .social-icons a i {
+  font-size: 25px; /* Bigger size */
+}
+
+#home .social-icons img {
+  width: 25px; /* Increase SVG size */
+}
+
+/* Icons default color */
+#home .social-icons i {
+  color: black; /* Default black */
+}
+
+/* For Light Theme */
+#name, #cursor {
+  color: #007bff; /* Blue */
+}
+
+/* For Dark Theme */
+body.dark-theme #name, body.dark-theme #cursor {
+  color: #f8d216; /* Yellow */
+}
+
+
+/* Icons in dark mode */
+body.dark-theme #home .social-icons i {
+  color: white; /* Default white */
+}
+
+/* SVG icons - light mode */
+#home .social-icons img {
+  filter: invert(0%) sepia(0%) saturate(0%) brightness(100%) contrast(100%);
+}
+
+/* SVG icons - dark mode */
+body.dark-theme #home .social-icons img {
+  filter: invert(100%) sepia(0%) saturate(0%) brightness(100%) contrast(100%);
+}
+
+/* Hover effect for all icons (only zoom, no color change) */
+#home .social-icons a i,
+#home .social-icons a img {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Zoom effect on hover */
+#home .social-icons a:hover i,
+#home .social-icons a:hover img {
+  transform: scale(1.2); /* Slightly bigger zoom */
+}
+
+/* Prevent icons from turning blue on hover */
+#home .social-icons a:hover i {
+  color: black !important;  /* Force black in light mode */
+}
+
+body.dark-theme #home .social-icons a:hover i {
+  color: white !important;  /* Force white in dark mode */
+}
+
+
+/* Resume button styles */
+#home button.btn-sm {
+  font-size: 14px;
+  padding: 8px 16px;
+  background-color: #007bff; /* Default blue color */
+  border: none;
+  color: white;
+}
+
+/* Resume button - Dark theme */
+body.dark-theme #home button.btn-sm {
+  background-color: #ffc107; /* Yellow color from navbar */
+  color: black;
+}
+
+/* Resume button hover effect */
+#home button.btn-sm:hover {
+  filter: brightness(90%);
+}
+
+/* Ensure the right alignment of image container */
+#home .col-md-6.d-flex.justify-content-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Fixed image size in its own container */
+#image-container img {
+  width: 350px; /* Default fixed width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 15px;
+}
+
+/* Mobile responsiveness for image */
+@media (max-width: 767px) {
+  #image-container {
+    justify-content: center !important; /* Center the image on small screens */
+    display: flex;
+  }
+
+  #image-container img {
+    width: 200px; /* Reduce image size for smaller screens */
+  }
+}
+
+
+
+/* Bat Flying Animation */
+#bat-fly-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.bat {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  animation: flyOff 5s ease-in-out infinite;
+  opacity: 0;
+}
+
+@keyframes flyOff {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(var(--x1), var(--y1));
+  }
+  50% {
+    opacity: 0.7;
+    transform: translate(var(--x2), var(--y2));
+  }
+  75% {
+    opacity: 0.5;
+    transform: translate(var(--x3), var(--y3));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x4), var(--y4));
+  }
+}
+
+/* Dark Mode Adjustments for Bat Color */
+body.dark-theme .bat {
+  filter: invert(1); /* Inverts the colors to make the bats white in dark mode */
+}
+
+/* Responsiveness for Smaller Screens */
+@media (max-width: 768px) {
+  #bat-fly-container {
+    width: 100%;
+    height: 100%;
+  }
+  .bat {
+    width: 20px; /* Smaller bats for mobile */
+    height: 20px;
+  }
+}
+
+
+/* About Section */
+#about {
+  padding: 50px 0;
+  margin-top: 300px;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #007bff;
+}
+
+/* Image styling */
+.about-img {
+  width: 350px; /* Fixed size for consistency */
+  max-width: 100%; /* Ensures responsiveness */
+  height: 350px; /* Make it a perfect circle */
+  object-fit: cover; /* Ensures the image fills the circular frame */
+  border-radius: 50%; /* Makes it round */
+  border: 3px solid #007bff; /* Light theme: Blue border */
+}
+
+/* Highlight important text */
+#about .highlight {
+  font-weight: bold;
+  color: #007bff; /* Light theme: Blue */
+}
+
+/* Dark Theme */
+body.dark-theme #about h2 {
+  color: #f8d210 !important; /* Dark theme: Yellow */
+}
+
+/* Dark Theme */
+body.dark-theme #about .highlight {
+  color: #f8d210 !important; /* Dark theme: Yellow */
+}
+
+body.dark-theme .about-img {
+  border-color: #f8d210 !important; /* Dark theme: Yellow border */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #about .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about .col-md-4 {
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Skills Section */
+#skills {
+  padding: 60px 0;
+  text-align: center;
+  margin-top: 150px;
+}
+
+#skills h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #007bff;
+}
+
+#skills h3 {
+  color: #007bff;
+}
+
+.skills-intro {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 35px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Balanced box size */
+  gap: 25px;
+  max-width: 1100px; /* Keeps margins while using space well */
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Skill Category Boxes */
+.skill-category {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 18px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Keeps headings centered */
+  min-height: 220px; /* Keeps size equal but not too large */
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  border: 2px solid transparent; /* Initial border */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover Effect */
+.skill-category:hover {
+  background: #f5f7fa; /* Light background on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+  border-color: #007bff; /* Blue border on hover */
+  transform: translateY(-5px); /* Slightly elevate the box */
+}
+
+/* Center the Headings */
+.skills-grid h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 500;
+  width: 100%;
+}
+
+/* Left Align the Bullet Points */
+.skills-grid ul {
+  list-style-type: disc;
+  padding-left: 22px;
+  text-align: left;
+  width: 100%; /* Ensures lists stay left-aligned */
+  flex-grow: 1;
+}
+
+/* Two-Column List for Security Tools */
+.two-column-list {
+  column-count: 2;
+  column-gap: 15px;
+}
+
+/* Default link color in light theme */
+.connect-link {
+  color: #007bff; /* Same blue as the highlighted text */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Underline on hover for better UX */
+.connect-link:hover {
+  text-decoration: underline;
+}
+
+/* Dark Theme: Skill Category Box */
+body.dark-theme .skill-category {
+  background: #424242; /* Darker background */
+  box-shadow: 0 4px 10px rgba(248, 210, 16, 0.4); /* Yellow glow shadow */
+  border: 2px solid transparent;
+}
+
+/* Dark Theme: Hover Effect */
+body.dark-theme .skill-category:hover {
+  background: #242527; /* Darker background on hover */
+  box-shadow: 0 6px 15px rgba(248, 210, 16, 0.5); /* Yellow shadow on hover */
+  border-color: #f8d210; /* Yellow border on hover */
+  transform: translateY(-5px); /* Slightly elevate the box */
+}
+
+/* Dark Theme: Skill Section */
+body.dark-theme #skills {
+  color: #fcfaee; /* Light text color for dark theme */
+  margin-top: 150px;
+}
+
+body.dark-theme #skills h3{
+  color: #f8d210;
+}
+
+/* Dark Theme: Skill Category Heading */
+body.dark-theme .skills-grid h3 {
+  color: #f8d210; /* Yellow color for headings */
+}
+
+/* Dark Theme: Skill Category List */
+body.dark-theme .skills-grid ul {
+  list-style-type: disc;
+  padding-left: 22px;
+  text-align: left;
+  width: 100%; /* Ensures lists stay left-aligned */
+  flex-grow: 1;
+}
+
+/* Dark Theme: Skill Grid - Heading */
+body.dark-theme #skills h2 {
+  color: #f8d210; /* Yellow color for main heading */
+}
+
+/* Dark Theme: Skill Category Box Hover Effect */
+body.dark-theme .skill-category:hover {
+  background: #242527; /* Darker background */
+  box-shadow: 0 6px 15px rgba(248, 210, 16, 0.5); /* Yellow glow shadow */
+  border-color: #f8d210; /* Yellow border */
+  transform: translateY(-5px);
+}
+
+/* Dark Theme: Connect Link */
+body.dark-theme .connect-link {
+  color: #f8d210; /* Yellow links in dark theme */
+}
+
+/* Dark Theme: Connect Link Hover */
+body.dark-theme .connect-link:hover {
+  text-decoration: underline;
+}
+
+
+/* Certifications Section */
+#certifications {
+  padding: 50px 0;
+  text-align: center;
+  margin-top: 250px;
+}
+
+#certifications h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #007bff; /* Dark color for the heading */
+}
+
+/* Center the Headings */
+#certifications h4 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 500;
+  width: 100%;
+  color: #007bff;
+}
+
+.certifications-intro {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 35px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Certificate Tile Styling */
+#certifications .certificate-tile {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 20px; /* Match Skills */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Match Skills */
+  min-height: 180px; /* Match Skills */
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2); /* Match Skills */
+  border: 2px solid transparent; /* Match Skills */
+  transition: all 0.3s ease; /* Match Skills */
+  margin: 0; /* Remove extra margin */
+  margin-bottom: 20px;
+}
+
+
+/* Certificate Tile Hover Effect */
+#certifications .certificate-tile:hover {
+  background: #f5f7fa; /* Light background on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
+  border-color: #007bff; /* Blue border on hover */
+  transform: translateY(-5px); /* Slightly elevate the box */
+}
+
+/* Icons Container */
+#certifications .icons {
+  margin-top: auto;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Icon Styling */
+#certifications .icons img {
+  width: 28px; /* Icon size */
+  height: 28px;
+  margin: 0 15px; /* Spacing between icons */
+  transition: transform 0.2s ease-in-out, filter 0.3s;
+}
+
+/* Icon Hover Effect */
+#certifications .icons img:hover {
+  transform: scale(1.1); /* Slightly enlarges icon on hover */
+  filter: brightness(1.2); /* Lightens icon on hover */
+}
+
+/* Responsiveness for Smaller Screens */
+@media (max-width: 768px) {
+  #certifications .certificate-tile {
+    width: 100%; /* Full width for smaller screens */
+    margin: 10px 0;
+    height: auto;
+  }
+
+  #certifications .icons img {
+    width: 24px; /* Smaller icon size for small screens */
+    height: 24px;
+  }
+}
+
+body.dark-theme #certifications .certificate-tile {
+  background: #424242; /* Match skills section */
+  border: 2px solid transparent; /* Initially transparent */
+  box-shadow: 0 4px 10px rgba(248, 210, 16, 0.4); /* Yellow glow */
+}
+
+body.dark-theme #certifications .certificate-tile:hover {
+  background: #242527; /* Match skills hover effect */
+  box-shadow: 0 6px 15px rgba(248, 210, 16, 0.5); /* Yellow glow on hover */
+  border-color: #f8d210; /* Yellow border on hover */
+}
+
+
+/* Dark Mode - Icon Adjustments */
+body.dark-theme #certifications .icons .link-icon {
+  filter: invert(1);
+}
+
+body.dark-theme #certifications .icons .link-icon:hover {
+  filter: invert(0.8);
+}
+
+/* Dark Mode - Text Adjustments */
+body.dark-theme #certifications h2 {
+  color: #f8d210; /* Yellow text in dark theme */
+}
+
+body.dark-theme #certifications h4 {
+  color: #f8d210; /* Yellow text in dark theme */
+}
+
+/* Dark Mode - Icon Hover Effect */
+body.dark-theme #certifications .icons img:hover {
+  transform: scale(1.1); /* Slightly enlarges on hover */
+  filter: brightness(1.3); /* Lightens icon more on hover in dark theme */
+}
+
+/* Responsiveness for Smaller Screens */
+@media (max-width: 768px) {
+  #certifications .certificate-tile {
+    width: 100%;
+    margin: 10px 0;
+    height: auto;
+  }
+
+  #certifications .icons img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+
+
+/* Projects Section */
+#projects {
+  padding: 50px 5%;
+  text-align: center;
+  margin-top: 150px;
+}
+
+#projects h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #007bff;
+}
+
+#projects p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 35px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Project Cards Layout */
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+/* Project Card Styling */
+.project-card {
+  width: 100%;
+  max-width: 300px;
+  min-height: 350px;
+  perspective: 1000px; /* Enables 3D effect */
+}
+
+.project-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.project-card:hover .project-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front of the Card */
+.project-card-front {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 2px solid transparent; /* Match Skills */
+  transition: all 0.3s ease; /* Match Skills */
+  margin: 0; /* Remove extra margin */
+  margin-bottom: 20px;
+
+}
+
+.project-card-front h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: black; /* Default color for light theme */
+}
+
+.project-card-front p {
+  font-size: 1rem;
+}
+
+/* Back of the Card */
+.project-card-back {
+  background-color: #f5f7fa; /* Same background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  border: 2px solid #007bff;
+}
+
+.project-card-back h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.project-card-back p {
+  font-size: 1rem;
+}
+
+.pdf-icon {
+  font-size: 25px;
+  color: #007bff; /* Blue in light theme */
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.project-card-back .pdf-icon {
+  margin-top: auto;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.project-card:hover .pdf-icon {
+  color: #007bff; /* Darker blue when hovered */
+}
+
+/* Project Card Headings - Light Theme */
+.project-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center; /* Center-align the heading */
+  color: #007bff; /* Blue color for light theme */
+}
+
+/* Project Card Headings - Dark Theme */
+body.dark-theme .project-card h3 {
+  color: #f8d210; /* Yellow color for dark theme */
+}
+
+
+/* Dark Theme Adjustments */
+body.dark-theme .project-card-front {
+  background-color: #424242; /* Dark background */
+  border: 2px solid transparent; /* Initially transparent */
+  box-shadow: 0 4px 10px rgba(248, 210, 16, 0.4); /* Yellow glow */
+ }
+
+body.dark-theme .project-card-back {
+  background-color: #242527;
+  box-shadow: 0 6px 15px rgba(248, 210, 16, 0.5); /* Yellow glow on hover */
+  border-color: #f8d210; /* Yellow border on hover */
+}
+
+body.dark-theme .pdf-icon {
+  color: #f8d210 !important; /* Yellow in dark theme */
+}
+
+body.dark-theme .project-card-back .pdf-icon:hover {
+  color: #f8d210; /* Darker yellow when hovered */
+}
+
+/* Responsiveness for Smaller Screens */
+@media (max-width: 768px) {
+  .project-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .project-card {
+    width: 100%;
+    margin: 10px 0;
+    min-height: auto; /* Let height adjust based on content */
+  }
+}
+
+
+
+#experience {
+  padding: 50px 0;
+  text-align: center;
+  margin-top: 150px;
+}
+
+#experience h2 {
+  font-weight: bold;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #007bff;
+}
+
+#experience p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 35px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Experience Container for Side-by-Side Layout */
+.experience-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Timeline Styling */
+.timeline {
+  position: relative;
+  max-width: 600px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timeline h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Timeline Item Styling */
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Timeline Point - Adjusted for Flexbox */
+.timeline-point {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #007bff;
+  position: absolute;
+  left: -28.5px; /* Position the dot on the left side of the line */
+  top: 1%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/* Timeline Content Box */
+.timeline-content {
+  text-align: left;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.05); /* Match skills/certifications */
+  border-radius: 10px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  border: 2px solid transparent; /* Initial border */
+  transition: all 0.3s ease; /* Smooth transition */
+  flex-grow: 1;
+  position: relative;
+}
+
+/* Hover Effect */
+.timeline-content:hover {
+  background: #f5f7fa; /* Slightly darker shade */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  border-color: #007bff;
+  transform: translateY(-5px); /* Lift on hover */
+}
+
+.timeline-content h4 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.timeline-content span {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.timeline-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Connecting Line (Fixed Height) */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 7px;
+  height: 100%; /* Dynamic height */
+  width: 1px;
+  background-color: #007bff;
+  top: 10px;  /* Moves the start down */
+  bottom: 10px; /* Moves the end up */
+
+}
+
+/* Dark Theme Styling */
+body.dark-theme #experience {
+  color: #e0e0e0;
+}
+
+/* Dark Theme - Headings in Yellow */
+body.dark-theme h2,
+body.dark-theme #experience h3,
+body.dark-theme h4,
+body.dark-theme .timeline-content h4 {
+  color: #f8d210 !important;
+}
+
+/* Dark Theme - Timeline Content */
+body.dark-theme .timeline-content {
+  background: #424242; /* Dark background similar to skills */
+  box-shadow: 0 4px 10px rgba(248, 210, 16, 0.4); /* Yellow glow */
+  border: 2px solid transparent;
+}
+
+/* Dark Theme - Hover Effect */
+body.dark-theme .timeline-content:hover {
+  background: #242527; /* Slightly darker hover */
+  box-shadow: 0 6px 15px rgba(248, 210, 16, 0.5); /* Yellow shadow */
+  border-color: #f8d210; /* Yellow border */
+  transform: translateY(-5px); /* Lift effect */
+}
+
+body.dark-theme .timeline-point {
+  background-color: #f8d210;
+}
+
+body.dark-theme .timeline::before {
+  background-color: #f8d210;
+}
+
+/* Responsive Fix for Smaller Screens */
+@media (max-width: 768px) {
+  .experience-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-point {
+    margin-bottom: 10px;
+  }
+
+  .timeline-content {
+    text-align: center;
+  }
+}
+
+/* Dark Theme */
+/* Ensure the dark mode styles apply from the start */
+body.dark-theme {
+  background-color: #121212;
+  color: #fff;
+}
+
+
+body.dark-theme .navbar {
+  background-color: #424242;
+}
+
+body.dark-theme .navbar-nav .nav-link {
+  color: #fff;
+}
+
+body.dark-theme .certificate-tile {
+  background-color: #333;
+  color: #fff;
+}
