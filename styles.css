@@ -805,7 +805,146 @@ body.dark-theme .project-card-back .pdf-icon:hover {
   }
 }
 
+/* Competitions Section */
+#competitions {
+  padding: 60px 0;
+  text-align: center;
+  margin-top: 150px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
 
+.competition-intro {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 35px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#competitions h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #007bff;
+}
+
+#competitions h4 {
+  color: #007bff;
+}
+
+#competitions p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 35px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Competitions Grid (Ensure Flex Layout) */
+.competitions-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.competitions-grid .col-md-6 {
+  flex: 0 0 40%;
+  box-sizing: border-box;
+}
+
+/* Competitions Cards */
+.competition-card {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1.5rem 1.8rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 180px;
+  max-width: 100%;
+  width: 100%;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* Rotating Gradient Animation */
+.competition-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, #00BFFF, #8A2BE2, #7B68EE);
+  animation: rotate 4s linear infinite;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Hover Effect */
+.competition-card:hover::before {
+  opacity: 0.25;
+}
+
+.competition-card:hover {
+  transform: translateY(-5px);
+  border-color: #007bff;
+  box-shadow: 0 8px 30px rgba(0, 255, 224, 0.2);
+}
+
+/* Dark Mode Adjustments */
+body.dark-theme #competitions .competition-card {
+  background: #424242;
+  box-shadow: 0 4px 10px rgba(248, 210, 16, 0.4);
+  border: 2px solid transparent;
+}
+
+/* Dark Mode Hover Effect */
+body.dark-theme #competitions .competition-card:hover {
+  background: #242527;
+  box-shadow: 0 6px 15px rgba(248, 210, 16, 0.5);
+  border-color: #f8d210;
+  transform: translateY(-5px);
+}
+
+body.dark-theme #competitions .competition-card::before {
+  background: linear-gradient(120deg, #00bfff, #ff9800, #00bfff);
+}
+
+/* Dark Mode Text Color */
+body.dark-theme #competitions {
+  color: #e0e0e0;
+}
+
+/* Dark Mode Heading Color */
+body.dark-theme #competitions h2 {
+  color: #f8d210;
+}
+
+/* Dark Mode Competition Title */
+body.dark-theme .competition-card h4 {
+  color: #f8d210;
+}
+
+/* Animated rotating gradient */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 #experience {
   padding: 50px 0;
