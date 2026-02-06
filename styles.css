@@ -1154,3 +1154,101 @@ body.dark-theme .certificate-tile {
   background-color: #333;
   color: #fff;
 }
+
+/* =========================
+   MOBILE OPTIMIZATION LAYER
+   ========================= */
+@media (max-width: 600px) {
+
+  /* Reduce cinematic spacing */
+  #home,
+  #about,
+  #skills,
+  #certifications,
+  #projects,
+  #competitions,
+  #experience {
+    margin-top: 80px !important;
+    padding-top: 40px;
+  }
+
+  /* Headings scale better on mobile */
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  /* PROJECTS — disable flip cards */
+  .project-card {
+    perspective: none;
+    min-height: auto;
+  }
+
+  .project-card-inner {
+    transform: none !important;
+  }
+
+  .project-card-front,
+  .project-card-back {
+    position: relative;
+    transform: none;
+    backface-visibility: visible;
+    height: auto;
+  }
+
+  .project-card-back {
+    display: none;
+  }
+
+  .project-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* CERTIFICATIONS */
+  #certifications .certificate-tile {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  /* COMPETITIONS */
+  .competitions-grid {
+    flex-direction: column;
+  }
+
+  .competitions-grid .col-md-6 {
+    flex: 0 0 100%;
+  }
+
+  .competition-card {
+    width: 100%;
+  }
+
+  /* EXPERIENCE — fix timeline */
+  .timeline {
+    padding-left: 0;
+  }
+
+  .timeline::before {
+    left: 0;
+    transform: none;
+  }
+
+  .timeline-item {
+    padding-left: 20px;
+  }
+
+  .timeline-point {
+    left: -7px;
+    top: 20px;
+    transform: none;
+  }
+
+  .timeline-content {
+    text-align: left;
+  }
+}
