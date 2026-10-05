@@ -1,428 +1,595 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js" data-theme="night">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vijayavarman's Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vijayavarman&#x27;s Portfolio</title>
+  <meta name="description" content="Cybersecurity graduate from RIT working hands-on with privileged access and identity governance, using CyberArk PAM, SailPoint ISC, Active Directory, and PowerShell automation.">
+  <meta name="theme-color" content="#0D0B07">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vijayavarman Arunasalam Harikrishnan · IAM &amp; Blue Team Security">
+  <meta property="og:description" content="Identity and access management, privileged access, and blue team security. MS Cybersecurity, RIT.">
+  <meta property="og:url" content="https://vijayavarman09.github.io/">
+  <meta property="og:image" content="https://vijayavarman09.github.io/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/ibm-plex-mono-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/icons.css">
+  <link rel="stylesheet" href="assets/css/motion.css">
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/audit.js" defer></script>
+  <script src="assets/js/nav.js" defer></script>
+  <script src="assets/js/session.js" defer></script>
+  <script src="assets/js/decrypt.js" defer></script>
+  <script src="assets/js/jit.js" defer></script>
+  <script src="assets/js/contact.js" defer></script>
+  <script src="assets/js/terminal.js" defer></script>
+  <script src="assets/js/motion.js" defer></script>
 </head>
 <body>
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="Vijayavarman, back to top"><svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="13" style="fill:var(--accent)"/><path style="fill:var(--on-accent)" d="M4 9H20L28.6 31.2 29.2 23.6 31.2 27.4h1.6L34.8 23.6 35.4 31.2 44 9H60Q45.5 30 39 56Q32 53 25 56Q18.5 30 4 9Z"/></svg><span class="brand__text">vijayavarman</span></a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">menu</button>
+      <nav class="nav" id="site-nav" aria-label="Sections">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#about">about</a></li>
+          <li><a class="nav__link" href="#experience">experience</a></li>
+          <li><a class="nav__link" href="#projects">projects</a></li>
+          <li><a class="nav__link" href="#certifications">certifications</a></li>
+          <li><a class="nav__link" href="#skills">skills</a></li>
+          <li><a class="nav__link" href="#publication">publication</a></li>
+          <li><a class="nav__link" href="#competitions">competitions</a></li>
+        </ul>
+      </nav>
+
+      <button class="shift-toggle" type="button" id="shift-toggle" aria-label="Switch to day shift (light theme)">
+        <span class="shift-toggle__dot" aria-hidden="true"></span>
+        <span class="shift-toggle__label">shift: night</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top" aria-label="Introduction">
+      <div class="wrap hero__grid">
+        <div class="hero__main">
+          <div class="session" data-settle="1">
+            <button class="session__badge" type="button" aria-expanded="false" aria-controls="session-panel">
+              <span>session: <b>guest</b></span>
+              <span>role: <b>viewer</b></span>
+              <span>access: <b class="granted">granted</b></span>
+              <span class="session__caret" aria-hidden="true">›</span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#publication">Publication</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#competitions">Competitions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item">
-                        <button class="btn btn-outline-light" id="theme-toggle">🌙</button>
-                    </li>
-                </ul>
+            <div class="session__panel" id="session-panel">
+              <div>
+                <dl class="session__details">
+                  <dt>session id</dt><dd data-session="id">anonymous</dd>
+                  <dt>started</dt><dd data-session="start">on page load</dd>
+                  <dt>auth method</dt><dd>public access</dd>
+                  <dt>mfa</dt><dd>not required for read-only</dd>
+                  <dt>scope</dt><dd>read-only, least privilege</dd>
+                  <dt>expires</dt><dd>when you close this tab</dd>
+                  <dd class="session__note">Need elevated access? <a href="mailto:vijayavarmanah@gmail.com">Request it by email.</a></dd>
+                </dl>
+              </div>
             </div>
-        </div>
-    </nav>
+          </div>
 
-<!-- Home Section -->
-<section id="home" class="container text-left py-5">
-    <div class="row" style="margin-left: 5%; margin-right: 5%;">
-        <div class="col-md-6">
-            <h1>Hi, I'm<br><strong><span id="name"></span><span id="cursor">|</span></strong></h1>
-            <h3 class="batcave-intro">Welcome to my Batcave!</h3>
-            <p>By day, I'm a Cybersecurity graduate from RIT with expertise in <strong>Identity & Access Management and Blue Team operations</strong>. 
-               By night, I help secure systems, monitor threats, and strengthen access controls.
-            </p>
-            <div class="d-flex align-items-center">
-                <a href="Vijayavarman-Resume.pdf" target="_blank">
-                    <button class="btn btn-primary btn-sm me-3">Resume</button>
-                </a>                
-                <div id="social-icons" class="social-icons">
-                    <a href="mailto:vijayavarmanah@gmail.com" target="_blank" class="mx-2"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/vijayavarman-harikrishnan/" target="_blank" class="mx-2"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/vijayavarman09/" target="_blank" class="mx-2"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://tryhackme.com/p/CyBeRkNiGhT72" target="_blank" class="mx-2"><img src="thm-icon.svg" alt="TryHackMe"></a>
-                    <a href="https://ctf.hackthebox.com/user/profile/623749" target="_blank" class="mx-2"><img src="htb-icon.svg" alt="Hack The Box"></a>
-                    <a href="https://www.credly.com/users/vijayavarman-arunasalam-harikrishnan" target="_blank" class="mx-2"><i class="fa-solid fa-medal"></i></a>
+          <h1 class="hero__name" id="hero-name">
+            <span class="hero__name-line">Vijayavarman</span>
+            <span class="hero__name-line">Arunasalam</span>
+            <span class="hero__name-line">Harikrishnan</span>
+          </h1>
+
+          <p class="hero__role" data-settle="2">Identity &amp; Access Management and Blue Team Security</p>
+          <p class="hero__pitch" data-settle="2">I&#x27;m a cybersecurity graduate from RIT, working hands-on with privileged access and identity governance in a live healthcare environment, using CyberArk PAM, SailPoint ISC, Active Directory, and PowerShell automation.</p>
+          <p class="hero__status" data-settle="3"><span class="hero__status-dot" aria-hidden="true"></span>Open to full-time IAM, PAM, and SOC roles and willing to relocate.</p>
+
+          <div class="hero__actions" data-settle="4">
+            <a class="btn btn--primary" href="Vijayavarman-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            <ul class="links" aria-label="Profiles and contact">
+            <li><a href="mailto:vijayavarmanah@gmail.com"><span class="sr-only">Email Vijayavarman</span><span class="icon icon--email" aria-hidden="true"></span></a></li>
+            <li><a href="https://www.linkedin.com/in/vijayavarmanah/" target="_blank" rel="noopener noreferrer"><span class="sr-only">LinkedIn profile</span><span class="icon icon--linkedin" aria-hidden="true"></span></a></li>
+            <li><a href="https://github.com/vijayavarman09/" target="_blank" rel="noopener noreferrer"><span class="sr-only">GitHub profile</span><span class="icon icon--github" aria-hidden="true"></span></a></li>
+            <li><a href="https://tryhackme.com/p/CyBeRkNiGhT72" target="_blank" rel="noopener noreferrer"><span class="sr-only">TryHackMe profile</span><span class="icon icon--tryhackme" aria-hidden="true"></span></a></li>
+            <li><a href="https://profile.hackthebox.com/profile/019ed6a7-9f85-706f-ab36-3ca2df232bd9" target="_blank" rel="noopener noreferrer"><span class="sr-only">Hack The Box profile</span><span class="icon icon--hackthebox" aria-hidden="true"></span></a></li>
+            <li><a href="https://www.credly.com/users/vijayavarman-arunasalam-harikrishnan" target="_blank" rel="noopener noreferrer"><span class="sr-only">Credly badges</span><span class="icon icon--credly" aria-hidden="true"></span></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <aside class="hero__aside" data-settle="1" aria-label="Profile photo">
+          <figure class="id-card">
+            <img class="id-card__photo" src="assets/img/vijay.jpg" width="480" height="600" alt="Vijayavarman">
+            <dl class="id-card__meta">
+              <dt>subject</dt><dd>vijayavarman</dd>
+              <dt>status</dt><dd class="is-active">active</dd>
+              <dt>based</dt><dd>rochester, ny</dd>
+            </dl>
+          </figure>
+        </aside>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+      <h2 class="path-heading" id="about-title"><span><span class="path-heading__slash">/</span>about</span></h2>
+        <div class="about">
+          <div class="about__text">
+            <p class="about__lead">My first capture-the-flag challenge was supposed to be a bit of fun. It turned into a career.</p>
+            <p>Every challenge was a puzzle, and the investigation behind each answer was what drew me in, reading the clues, working out what happened, and understanding how the pieces fit together. That curiosity took me to RIT for a master&#x27;s in Cybersecurity.</p>
+            <p>It also shaped where I landed. Every account, permission, and sign-in in an organization leaves a trail, and identity and access management is where that trail lives. When something goes wrong, like an account that keeps locking out, the answer is somewhere in those details, and tracking it down is the part I enjoy most. Protecting access and investigating when it breaks feel like two halves of the same job to me.</p>
+            <p>Away from work, some of my favorite time is spent in multiplayer games with friends, where good teamwork and quick calls decide the outcome. When I step away from screens, I&#x27;m always up for trying something new, whether or not I&#x27;m any good at it yet. Rock climbing was one of those experiments. The gym, on the other hand, is a habit.</p>
+          </div>
+          <dl class="record">
+            <div><dt>education</dt><dd>MS Cybersecurity, Rochester Institute of Technology<span>GPA 3.97 / 4.0 · 2023–2026</span></dd><dd>BE Computer Science and Engineering, Meenakshi College of Engineering<span>GPA 8.3 / 10 · 2016–2020</span></dd></div>
+            <div><dt>focus</dt><dd>Identity governance, privileged access, and blue team operations</dd></div>
+            <div><dt>next target</dt><dd>INE Certified Cloud Associate (ICCA)</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+      <h2 class="path-heading" id="experience-title"><span><span class="path-heading__slash">/</span>experience</span></h2>
+      <p class="section-intro">Every role leaves a trail. Here&#x27;s mine.</p>
+      <div class="timeline-group">
+        <h3 class="timeline-group__label">professional</h3>
+        <ol class="timeline">
+          <li class="entry">
+            <p class="entry__when"><span>Aug 2025 – Present</span></p>
+            <div>
+              <h4 class="entry__title">Identity and Access Management Intern</h4>
+              <p class="entry__org">Rochester Regional Health · Rochester, NY</p>
+              <ul class="entry__points prose-list">
+              <li>Onboard privileged, service, and vendor accounts (100+ to date) within a 700+ safe, 9,000+ account CyberArk PAM environment, configuring safe permissions and coordinating password rotation with application owners.</li>
+              <li>Migrate privileged accounts identified through third-party security assessments into CyberArk PAM (500+ to date), while contributing to CyberArk EPM policy design, elevation workflow testing, and privilege reduction initiatives.</li>
+              <li>Develop PowerShell automation including a password reset notification system (30–200+ alerts/day) closing a communication gap, ad hoc AD reports, and bulk student provisioning (300+/semester) using existing scripts.</li>
+              <li>Resolve escalated Ivanti tickets for password resets, lockouts, and AD modifications through supervisor identity verification, and analyze Netwrix and Varonis logs to audit account activity and cleanup accuracy.</li>
+              <li>Support SailPoint ISC operations, managing account correlation, connector validation, and pre-onboarding verification for 80–120+ weekly hires to resolve provisioning discrepancies before start dates.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="entry">
+            <p class="entry__when"><span>Nov 2020 – Aug 2023</span></p>
+            <div>
+              <h4 class="entry__title">Programmer Analyst Trainee / Analyst / Associate</h4>
+              <p class="entry__org">Cognizant Technology Solutions · Chennai, India</p>
+              <ul class="entry__points prose-list">
+              <li>Automated API and functional testing workflows using Selenium, executing 50+ test cases per release.</li>
+              <li>Mentored 5 new team members to accelerate onboarding and team output.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="timeline-group">
+        <h3 class="timeline-group__label">teaching</h3>
+        <ol class="timeline">
+          <li class="entry">
+            <p class="entry__when"><span>Aug 2025 – Dec 2025</span><span>Aug 2024 – Dec 2024</span></p>
+            <div>
+              <h4 class="entry__title">Teaching Assistant, Cryptography and Authentication</h4>
+              <p class="entry__org">Rochester Institute of Technology</p>
+              <ul class="entry__points prose-list">
+              <li>Managed, graded, and provided feedback on Python and Java programming assignments covering cryptographic algorithms (Substitution Cipher, RC4, A5/1, MD5), using GitHub Classroom for submission and evaluation.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="entry">
+            <p class="entry__when"><span>Jan 2025 – Aug 2025</span></p>
+            <div>
+              <h4 class="entry__title">Teaching Assistant, Introduction to Cybersecurity</h4>
+              <p class="entry__org">Rochester Institute of Technology</p>
+              <ul class="entry__points prose-list">
+              <li>Assisted 60+ students with lab sessions and assignments covering network security, risk analysis, access control, and system security, and graded 25+ assignments per term with detailed feedback.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+      <h2 class="path-heading" id="projects-title"><span><span class="path-heading__slash">/</span>projects</span></h2>
+      <p class="section-intro">Case closed. Details on request.</p>
+        <div class="cases">
+        <article class="case" id="case-01" aria-labelledby="case-01-title">
+          <p class="case__id">case-01</p>
+          <div>
+            <h3 class="case__title" id="case-01-title">PQC-DEMS: Post-Quantum Cryptographic Digital Evidence Management System</h3>
+            <dl class="case__meta"><div><dt>domain</dt><dd>post-quantum cryptography</dd></div><div><dt>type</dt><dd>build</dd></div></dl>
+            <p class="case__summary">Built a forensic evidence management system secured with NIST post-quantum cryptographic algorithms to protect digital evidence against quantum threats.</p>
+            <p class="case__tools">ML-KEM-768 / ML-DSA-65 / RBAC / JWT / hash-chained audit log</p>
+            <div class="case__details" id="case-01-details">
+              <div>
+                <div class="findings">
+                  <p class="findings__label">findings</p>
+                  <ul class="prose-list">
+                  <li>Built a functional web-based forensic evidence management system implementing NIST-standardized ML-KEM-768 and ML-DSA-65 with RBAC, JWT authentication, and a hash-chained audit log, benchmarked across file sizes up to 1 GB.</li>
+                  <li>ML-DSA-65 signature generation measured up to 68x faster than RSA.</li>
+                  <li>Compared PQC and RSA across all operations, confirming PQC superiority in key generation, signing, upload, and download, while documenting RSA verification as 4 to 5x faster, a known lattice tradeoff.</li>
+                  </ul>
                 </div>
+              </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div id="image-container" class="d-flex justify-content-end">
-                <img src="batman.jpeg" alt="Vijayavarman" class="img-fluid rounded-3">
+          </div>
+        </article>
+        <article class="case" id="case-02" aria-labelledby="case-02-title">
+          <p class="case__id">case-02</p>
+          <div>
+            <h3 class="case__title" id="case-02-title">Attack and Defend Exercise: Securing a Corporate Infrastructure</h3>
+            <dl class="case__meta"><div><dt>domain</dt><dd>detection &amp; incident response</dd></div><div><dt>type</dt><dd>lab exercise</dd></div></dl>
+            <p class="case__summary">Built a corporate infrastructure with web, FTP, and Active Directory services, then attacked it and logged the intrusions.</p>
+            <p class="case__tools">Wazuh / Snort / Active Directory / web &amp; FTP services</p>
+            <div class="case__details" id="case-02-details">
+              <div>
+                <div class="findings">
+                  <p class="findings__label">findings</p>
+                  <ul class="prose-list">
+                  <li>Deployed a multi-service corporate network monitored with Wazuh and Snort, detecting 26,000+ security events and 2,900+ brute-force authentication attempts with zero successful logins during controlled attack simulations.</li>
+                  <li>Simulated exploitation of vulnerabilities including EternalBlue, BlueKeep, SQL injection, and path traversal, using Wazuh for intrusion detection and incident response.</li>
+                  </ul>
+                </div>
+              </div>
             </div>
+          </div>
+        </article>
+        <article class="case" id="case-03" aria-labelledby="case-03-title">
+          <p class="case__id">case-03</p>
+          <div>
+            <h3 class="case__title" id="case-03-title">Legal Compliance Analysis for Breach Remediation</h3>
+            <dl class="case__meta"><div><dt>domain</dt><dd>governance &amp; compliance</dd></div><div><dt>type</dt><dd>analysis</dd></div></dl>
+            <p class="case__summary">Analyzed a simulated healthcare data breach affecting 50,000+ individuals for non-compliance with HIPAA, PCI DSS, GDPR, GLBA, and NYDFS.</p>
+            <p class="case__tools">HIPAA / PCI DSS / GDPR / GLBA / NYDFS / NIST CSF 2.0</p>
+            <div class="case__details" id="case-03-details">
+              <div>
+                <div class="findings">
+                  <p class="findings__label">findings</p>
+                  <ul class="prose-list">
+                  <li>Mapped violations to HIPAA, PCI DSS, GDPR, GLBA, and NYDFS and applied NIST CSF 2.0 to propose a structured remediation roadmap.</li>
+                  <li>Quantified regulatory impact across each violation, including potential HIPAA fines up to $1.5M annually and GDPR penalties up to €20M, identifying supply chain over-privilege as a primary gap.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="case" id="case-04" aria-labelledby="case-04-title">
+          <p class="case__id">case-04</p>
+          <div>
+            <h3 class="case__title" id="case-04-title">Forensic Recovery of Web Browser Artifacts</h3>
+            <dl class="case__meta"><div><dt>domain</dt><dd>digital forensics</dd></div><div><dt>type</dt><dd>investigation</dd></div></dl>
+            <p class="case__summary">Investigated how much digital evidence survives manual deletion and private browsing across Chrome, Firefox, and Edge.</p>
+            <p class="case__tools">FTK Imager / Autopsy / Volatility / NirSoft</p>
+            <div class="case__details" id="case-04-details">
+              <div>
+                <div class="findings">
+                  <p class="findings__label">findings</p>
+                  <ul class="prose-list">
+                  <li>Used FTK Imager, Autopsy, Volatility, and 15+ NirSoft tools to recover artifacts under normal, deleted, and private browsing conditions.</li>
+                  <li>Showed that manually clearing a browser is insufficient for complete data eradication.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="case" id="case-05" aria-labelledby="case-05-title">
+          <p class="case__id">case-05</p>
+          <div>
+            <h3 class="case__title" id="case-05-title">IDOTS+: Enhancing IoTDots for Smart Environments</h3>
+            <dl class="case__meta"><div><dt>domain</dt><dd>IoT forensics</dd></div><div><dt>type</dt><dd>build</dd></div></dl>
+            <p class="case__summary">Improved an IoT forensics framework using CNNs to detect malicious activity in smart home environments.</p>
+            <p class="case__tools">CNN / OpenHAB / Raspberry Pi</p>
+            <div class="case__details" id="case-05-details">
+              <div>
+                <div class="findings">
+                  <p class="findings__label">findings</p>
+                  <ul class="prose-list">
+                  <li>Built a CNN log analyzer on OpenHAB and Raspberry Pi, achieving 89% accuracy in identifying threats.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="case" id="case-06" aria-labelledby="case-06-title">
+          <p class="case__id">case-06</p>
+          <div>
+            <h3 class="case__title" id="case-06-title">Threat Analysis: Cryptocurrency in Modern Social Engineering Attacks</h3>
+            <dl class="case__meta"><div><dt>domain</dt><dd>threat analysis</dd></div><div><dt>type</dt><dd>research</dd></div></dl>
+            <p class="case__summary">Performed a research-oriented analysis of five major cryptocurrency scams, examining how anonymity and decentralization enabled social engineering fraud.</p>
+            <p class="case__tools">Cialdini&#x27;s principles of influence</p>
+            <div class="case__details" id="case-06-details">
+              <div>
+                <div class="findings">
+                  <p class="findings__label">findings</p>
+                  <ul class="prose-list">
+                  <li>Applied Cialdini&#x27;s principles of influence to uncover social engineering tactics and proposed security improvements.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="case" id="case-07" aria-labelledby="case-07-title">
+          <p class="case__id">case-07</p>
+          <div>
+            <h3 class="case__title" id="case-07-title">Detecting Deepfakes with Machine Learning</h3>
+            <dl class="case__meta"><div><dt>domain</dt><dd>machine learning</dd></div><div><dt>type</dt><dd>build</dd></div></dl>
+            <p class="case__summary">Developed a deep learning model using CNNs to detect deepfake content through spatiotemporal analysis and feature extraction.</p>
+            <p class="case__tools">CNN / spatiotemporal analysis / feature extraction</p>
+            <div class="case__details" id="case-07-details">
+              <div>
+                <div class="findings">
+                  <p class="findings__label">findings</p>
+                  <ul class="prose-list">
+                  <li>Achieved 83.9% accuracy in detecting fake images and videos by analyzing facial features and inconsistencies over time.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="case" id="case-08" aria-labelledby="case-08-title">
+          <p class="case__id">case-08</p>
+          <div>
+            <h3 class="case__title" id="case-08-title">The Quantum Periodic Cipher: Merging Elements and Quantum Numbers for a Covert Channel</h3>
+            <dl class="case__meta"><div><dt>domain</dt><dd>covert channels</dd></div><div><dt>type</dt><dd>build</dd></div></dl>
+            <p class="case__summary">A covert communication method encoding messages in Reddit posts using elemental substitution and quantum numbers.</p>
+            <p class="case__tools">elemental substitution / quantum numbers / posting automation</p>
+            <div class="case__details" id="case-08-details">
+              <div>
+                <div class="findings">
+                  <p class="findings__label">findings</p>
+                  <ul class="prose-list">
+                  <li>Hides messages within chemistry-related discussions, using automation to post securely while avoiding detection.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="case" id="case-09" aria-labelledby="case-09-title">
+          <p class="case__id">case-09</p>
+          <div>
+            <h3 class="case__title" id="case-09-title">Enhancing Digital Twin Security through Partial Homomorphic Encryption</h3>
+            <dl class="case__meta"><div><dt>domain</dt><dd>applied cryptography</dd></div><div><dt>type</dt><dd>proof of concept</dd></div></dl>
+            <p class="case__summary">Implemented the ElGamal cryptosystem to secure digital twin data while still allowing secure computations on it.</p>
+            <p class="case__tools">ElGamal / MATLAB / Jupyter Notebook</p>
+            <div class="case__details" id="case-09-details">
+              <div>
+                <div class="findings">
+                  <p class="findings__label">findings</p>
+                  <ul class="prose-list">
+                  <li>Built a digital twin of the human heart in MATLAB that generates heart rate and stroke volume data, after existing heart simulators proved too complex or lacked the data needed.</li>
+                  <li>Chose ElGamal over RSA and Paillier for its multiplicative homomorphic property and semantic security.</li>
+                  <li>Encrypted heart rate and stroke volume with ElGamal in Python, then multiplied the ciphertexts to calculate cardiac output, so the patient&#x27;s vital signs were never exposed in plaintext during computation.</li>
+                  <li>Benchmarked the proof of concept at 10 and 100 sets of readings, with encryption staying under 3 ms and decryption under 1 ms.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="case" id="case-10" aria-labelledby="case-10-title">
+          <p class="case__id">case-10</p>
+          <div>
+            <h3 class="case__title" id="case-10-title">Survey &amp; Analysis: Machine Learning in Modern Digital Forensics</h3>
+            <dl class="case__meta"><div><dt>domain</dt><dd>machine learning in forensics</dd></div><div><dt>type</dt><dd>survey</dd></div></dl>
+            <p class="case__summary">Conducted a literature-backed survey evaluating how machine learning techniques address key challenges in digital forensics.</p>
+            <p class="case__tools">SVM / k-NN / Naïve Bayes</p>
+            <div class="case__details" id="case-10-details">
+              <div>
+                <div class="findings">
+                  <p class="findings__label">findings</p>
+                  <ul class="prose-list">
+                  <li>Applied models such as SVM, k-NN, and Naïve Bayes to enhance classification, anomaly detection, and real-time threat identification across forensic domains.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
         </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section" id="certifications" aria-labelledby="certifications-title">
+      <div class="wrap">
+      <h2 class="path-heading" id="certifications-title"><span><span class="path-heading__slash">/</span>certifications</span></h2>
+      <p class="section-intro">Valid credentials only. New ones are pending approval.</p>
+        <ul class="wallet">
+        <li class="cred">
+          <h3 class="cred__name">CompTIA Security+<span class="cred__code">SY0-701</span></h3>
+          <p class="cred__issuer">CompTIA</p>
+          <p class="cred__actions"><span class="cred__status is-active">active</span> <a href="certificates/security-plus.png" target="_blank" rel="noopener noreferrer">certificate</a> <a href="https://www.credly.com/badges/22e92056-916e-4841-ab6e-df9e9eea1047" target="_blank" rel="noopener noreferrer">verify</a></p>
+        </li>
+        <li class="cred">
+          <h3 class="cred__name">eLearnSecurity Junior Penetration Tester<span class="cred__code">eJPT</span></h3>
+          <p class="cred__issuer">INE Security</p>
+          <p class="cred__actions"><span class="cred__status is-active">active</span> <a href="certificates/ejpt.png" target="_blank" rel="noopener noreferrer">certificate</a> <a href="https://certs.ine.com/a817b1b3-f0ba-4699-ad86-795ee363b55f" target="_blank" rel="noopener noreferrer">verify</a></p>
+        </li>
+        <li class="cred">
+          <h3 class="cred__name">Fortinet NSE 3 Certified in Cybersecurity<span class="cred__code">NSE 3</span></h3>
+          <p class="cred__issuer">Fortinet<span>formerly Certified Associate in Cybersecurity</span></p>
+          <p class="cred__actions"><span class="cred__status is-active">active</span> <a href="certificates/fortinet-nse3.png" target="_blank" rel="noopener noreferrer">certificate</a> <a href="https://www.credly.com/badges/ecca079b-571d-416e-a547-b0bbc8680e59" target="_blank" rel="noopener noreferrer">verify</a></p>
+        </li>
+        <li class="cred">
+          <h3 class="cred__name">Microsoft Security, Compliance, and Identity Fundamentals<span class="cred__code">SC-900</span></h3>
+          <p class="cred__issuer">Microsoft</p>
+          <p class="cred__actions"><span class="cred__status is-lifetime">lifetime</span> <a href="certificates/sc-900.png" target="_blank" rel="noopener noreferrer">certificate</a> <a href="certificates/sc-900.pdf" target="_blank" rel="noopener noreferrer">pdf</a></p>
+        </li>
+        <li class="cred">
+          <h3 class="cred__name">Microsoft Azure Fundamentals<span class="cred__code">AZ-900</span></h3>
+          <p class="cred__issuer">Microsoft</p>
+          <p class="cred__actions"><span class="cred__status is-lifetime">lifetime</span> <a href="certificates/az-900.png" target="_blank" rel="noopener noreferrer">certificate</a> <a href="certificates/az-900.pdf" target="_blank" rel="noopener noreferrer">pdf</a></p>
+        </li>
+        <li class="cred">
+          <h3 class="cred__name">Google Cybersecurity Professional Certificate</h3>
+          <p class="cred__issuer">Google<span>via Coursera</span></p>
+          <p class="cred__actions"><span class="cred__status is-lifetime">lifetime</span> <a href="certificates/google-cybersecurity.png" target="_blank" rel="noopener noreferrer">certificate</a> <a href="https://coursera.org/verify/professional-cert/U85CGXN0PERL" target="_blank" rel="noopener noreferrer">verify</a></p>
+        </li>
+        <li class="cred">
+          <h3 class="cred__name">Introduction to Cybersecurity</h3>
+          <p class="cred__issuer">Cisco<span>Networking Academy</span></p>
+          <p class="cred__actions"><span class="cred__status is-lifetime">lifetime</span> <a href="certificates/cisco-intro-cybersecurity.png" target="_blank" rel="noopener noreferrer">certificate</a> <a href="certificates/cisco-intro-cybersecurity.pdf" target="_blank" rel="noopener noreferrer">pdf</a></p>
+        </li>
+        <li class="cred">
+          <h3 class="cred__name">Ethical Hacking from Scratch</h3>
+          <p class="cred__issuer">zSecurity</p>
+          <p class="cred__actions"><span class="cred__status is-lifetime">lifetime</span> <a href="certificates/zsecurity-ethical-hacking.png" target="_blank" rel="noopener noreferrer">certificate</a> <a href="https://zsecurity.org/certification/validation/" target="_blank" rel="noopener noreferrer">verify</a></p>
+        </li>
+        <li class="cred">
+          <h3 class="cred__name">INE Certified Cloud Associate<span class="cred__code">ICCA</span></h3>
+          <p class="cred__issuer">INE Security</p>
+          <p class="cred__actions"><span class="cred__status is-progress">in progress</span></p>
+        </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+      <h2 class="path-heading" id="skills-title"><span><span class="path-heading__slash">/</span>skills</span></h2>
+      <p class="section-intro">The tools in my current loadout, grouped by domain.</p>
+        <dl class="domains">
+        <div class="domain">
+          <dt>Identity &amp; access management<span>primary</span></dt>
+          <dd><ul><li>RBAC &amp; least privilege</li><li>Account lifecycle management</li><li>CyberArk PAM</li><li>CyberArk EPM</li><li>SailPoint ISC</li><li>Active Directory</li><li>Microsoft Entra ID</li><li>Ivanti</li><li>Varonis</li><li>Netwrix</li></ul></dd>
+        </div>
+        <div class="domain">
+          <dt>Security operations &amp; forensics<span>defend &amp; test</span></dt>
+          <dd><ul><li>Log analysis</li><li>Detection &amp; incident response</li><li>Wazuh</li><li>Snort</li><li>Wireshark</li><li>KQL</li><li>FTK Imager</li><li>Autopsy</li><li>Volatility</li><li>Nmap</li><li>Burp Suite</li><li>Metasploit</li></ul></dd>
+        </div>
+        <div class="domain">
+          <dt>Languages &amp; development<span>build &amp; automate</span></dt>
+          <dd><ul><li>PowerShell</li><li>Python</li><li>C#</li><li>SQL</li><li>Java</li><li>C</li><li>Entity Framework</li><li>Azure DevOps</li><li>Selenium</li><li>HTML &amp; CSS</li></ul></dd>
+        </div>
+        <div class="domain">
+          <dt>Frameworks &amp; standards<span>governance</span></dt>
+          <dd><ul><li>NIST CSF 2.0</li><li>NIST RMF</li><li>HIPAA</li><li>PCI DSS</li><li>GDPR</li></ul></dd>
+        </div>
+        <div class="domain">
+          <dt>Cryptography<span>research</span></dt>
+          <dd><ul><li>ML-KEM-768</li><li>ML-DSA-65</li><li>AES-256-GCM</li><li>ElGamal</li></ul></dd>
+        </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Publication -->
+    <section class="section" id="publication" aria-labelledby="publication-title">
+      <div class="wrap">
+      <h2 class="path-heading" id="publication-title"><span><span class="path-heading__slash">/</span>publication</span></h2>
+      <p class="section-intro">Research that made it to print.</p>
+        <article class="pub">
+          <p class="pub__meta">IEEE · ICECER 2025 · conference paper</p>
+          <h3 class="pub__title">ARTblock: Blockchain-Integrated AI for Real-Time Transaction Authenticity Verification in FinTech</h3>
+          <p class="pub__authors">S. M. Maheen, I. Sultana, M. N. Fardous Zim, <strong>V. Arunasalam Harikrishnan</strong>, and N. Kshetri</p>
+          <p class="pub__venue">2025 International Conference on Electrical and Computer Engineering Researches (ICECER), Antananarivo, Madagascar, pp. 1–6</p>
+          <a class="pub__link" href="https://ieeexplore.ieee.org/document/11400953" target="_blank" rel="noopener noreferrer">Read on IEEE Xplore · doi:10.1109/ICECER65523.2025.11400953</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Competitions -->
+    <section class="section" id="competitions" aria-labelledby="competitions-title">
+      <div class="wrap">
+      <h2 class="path-heading" id="competitions-title"><span><span class="path-heading__slash">/</span>competitions</span></h2>
+      <p class="section-intro">Results from the scoreboard.</p>
+        <div class="results">
+          <article class="result">
+            <p class="result__place">3<sup>rd</sup></p>
+            <div>
+              <h3>NCAE Cyber Games 2025</h3>
+              <p>Finished 3rd among the top 12 teams from the East Overflow region.</p>
+              <a href="https://badges.parchment.com/public/assertions/Oa_1BAfaQ0Gmh2sQsCgTIQ" target="_blank" rel="noopener noreferrer">view badge</a>
+            </div>
+          </article>
+          <article class="result">
+            <p class="result__place">23<sup>rd</sup></p>
+            <div>
+              <h3>CyberSeed 2024 CTF</h3>
+              <p>Finished 23rd among 160+ teams after completing 87% of challenges.</p>
+              <a href="certificates/cyberseed-2024.png" target="_blank" rel="noopener noreferrer">view certificate</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="contact">
+    <div class="wrap">
+      <p class="contact__lead">Looking for someone who enjoys defending systems from behind the scenes? Let&#x27;s connect.</p>
+      <div class="contact__row">
+        <a class="contact__email" href="mailto:vijayavarmanah@gmail.com">vijayavarmanah@gmail.com</a>
+        <button class="copy-btn" type="button" data-copy="vijayavarmanah@gmail.com" hidden>copy email</button>
+      </div>
+      <div class="contact__links">
+        <a href="https://www.linkedin.com/in/vijayavarmanah/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="Vijayavarman-Resume.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
+        <a href="https://github.com/vijayavarman09/" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+      <div class="footer__base">
+        <p>© 2026 Vijayavarman Arunasalam Harikrishnan. All rights reserved.</p>
+      </div>
     </div>
-</section>
+  </footer>
 
-<div id="bat-fly-container"></div>
-
-<!-- About Section -->
-<section id="about" class="container py-5">
-    <div class="row align-items-center" style="margin-left: 5%; margin-right: 5%;">
-        <div class="col-md-4 d-flex justify-content-center">
-            <img src="About-Me.jpeg" alt="Vijayavarman" class="about-img">
+  <!-- Dock -->
+  <div class="dock">
+    <div class="audit" hidden>
+      <div class="audit__panel" id="audit-panel" hidden>
+        <div class="audit__head">
+          <strong>audit log</strong>, this session only<br>
+          Entries are hash-chained with SHA-256, like the audit log in <a href="#case-01">case-01</a>. Nothing leaves your browser.
         </div>
-        <div class="col-md-8">
-            <h2 class="text-center text-md-left">About Me</h2>
-            <p><span class="highlight">I'm Vijayavarman – A hardworking Cyber Detective.</span>
-                By day, I'm a Cybersecurity graduate from RIT, trained in how modern systems are designed, secured, and governed.
-                By night, I'm quietly monitoring, analyzing, and strengthening systems — making sure weaknesses are spotted early and risks are contained before they turn into incidents.
-            </p>
-            <p>I don't wear a cape, but I do wear a few hats — <span class="highlight">IAM Practitioner, Security analyst, and System defender</span>.
-               I enjoy working behind the scenes to keep organizations running safely by managing identities, enforcing access boundaries, analyzing logs, and tightening the small gaps that attackers often rely on.
-            </p>
-            <p><span class="highlight">My mission?</span> To help build systems that are resilient by design — where access is intentional, monitoring is meaningful, and security improvements are steady rather than reactive.</p>
-            <p class="text-center text-md-left">
-                <strong>Looking for someone who enjoys defending the system from the shadows?
-                    <a href="#home" class="connect-link">Let's connect.</a></strong>
-            </p>
-        </div>
+        <ol class="audit__list" aria-live="polite"></ol>
+      </div>
+      <button class="audit__toggle" type="button" aria-expanded="false" aria-controls="audit-panel">
+        audit log <span class="audit__count">0</span>
+      </button>
     </div>
-</section>
+    <button class="terminal-chip" type="button" id="terminal-trigger" aria-label="Open terminal" hidden><span aria-hidden="true">&gt;<span class="terminal-chip__cursor">_</span> terminal</span></button>
+  </div>
 
-<!-- Skills Section -->
-<section id="skills">
-    <div class="container">
-        <h2>Skills</h2>
-        <p class="skills-intro">
-            <em>Want to know what gadgets I've got in my Cyber Detective utility belt? Here's a look at the tools and skills I rely on to keep systems secure.</em>
-        </p>
-
-        <!-- Top row: 3 cards -->
-        <div class="skills-row skills-top">
-            <div class="skill-category">
-                <h3><strong>Identity & Access Management</strong></h3>
-                <ul>
-                    <li>Active Directory</li>
-                    <li>Azure AD (Entra ID)</li>
-                    <li>CyberArk PAM</li>
-                    <li>SailPoint</li>
-                    <li>RBAC & Least Privilege</li>
-                    <li>Account Lifecycle Management</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3><strong>Languages & Scripting</strong></h3>
-                <ul>
-                    <li>Python</li>
-                    <li>PowerShell</li>
-                    <li>Java</li>
-                    <li>C</li>
-                    <li>SQL</li>
-                    <li>HTML & CSS</li>
-                    <li>Selenium</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3><strong>Security Operations & Monitoring</strong></h3>
-                <ul class="two-column-list">
-                    <li>Wazuh</li>
-                    <li>Snort</li>
-                    <li>Wireshark</li>
-                    <li>FTK Imager</li>
-                    <li>Autopsy</li>
-                    <li>Volatility</li>
-                    <li>Nmap</li>
-                    <li>Burp Suite</li>
-                    <li>Metasploit</li>
-                    <li>KQL</li>
-                    <li>Log Analysis</li>
-                    <li>Detection & Incident Response</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Bottom row: 2 cards centered -->
-        <div class="skills-row skills-bottom">
-            <div class="skill-category">
-                <h3><strong>Frameworks & Standards</strong></h3>
-                <ul>
-                    <li>NIST Cybersecurity Framework (CSF)</li>
-                    <li>NIST Risk Management Framework (RMF)</li>
-                    <li>HIPAA</li>
-                    <li>PCI DSS</li>
-                    <li>GDPR</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3><strong>Cryptography</strong></h3>
-                <ul>
-                    <li>ML-KEM-768</li>
-                    <li>ML-DSA-65</li>
-                    <li>AES-256-GCM</li>
-                    <li>ElGamal</li>
-                </ul>
-            </div>
-        </div>
+  <!-- Terminal -->
+  <dialog class="terminal" id="terminal" aria-label="Terminal">
+    <div class="terminal__bar">
+      <span>guest@vijayavarman: ~</span>
+      <button class="terminal__close" type="button" aria-label="Close terminal">close</button>
     </div>
-</section>
-
-<!-- Certifications Section -->
-<section id="certifications" class="container py-5">
-    <h2 class="text-center">Certifications</h2>
-    <p class="text-center certifications-intro">A detective never stops sharpening their skills. Here's what I've achieved:</p>
-    <div class="row certifications-grid">
-        <div class="col-md-3"><div class="certificate-tile"><h4>CompTIA Security+ (SY0-701)</h4><div class="icons"><a href="certificates/Security+.png" target="_blank"><img src="certificate-icon.svg" alt="Certificate" class="icon"></a><a href="http://verify.CompTIA.org" target="_blank"><img src="link-icon.svg" alt="Verify" class="link-icon"></a></div></div></div>
-        <div class="col-md-3"><div class="certificate-tile"><h4>Fortinet Certified Associate</h4><div class="icons"><a href="certificates/FCA.png" target="_blank"><img src="certificate-icon.svg" alt="Certificate" class="icon"></a><a href="https://training.fortinet.com/admin/tool/certificate/index.php" target="_blank"><img src="link-icon.svg" alt="Verify" class="link-icon"></a></div></div></div>
-        <div class="col-md-3"><div class="certificate-tile"><h4>Fortinet Certified Fundamentals</h4><div class="icons"><a href="certificates/FCF.png" target="_blank"><img src="certificate-icon.svg" alt="Certificate" class="icon"></a><a href="https://training.fortinet.com/admin/tool/certificate/index.php" target="_blank"><img src="link-icon.svg" alt="Verify" class="link-icon"></a></div></div></div>
-        <div class="col-md-3"><div class="certificate-tile"><h4>Google Cybersecurity Certificate</h4><div class="icons"><a href="certificates/Google-Cert.png" target="_blank"><img src="certificate-icon.svg" alt="Certificate" class="icon"></a><a href="https://coursera.org/verify/professional-cert/U85CGXN0PERL" target="_blank"><img src="link-icon.svg" alt="Verify" class="link-icon"></a></div></div></div>
-        <div class="col-md-3"><div class="certificate-tile"><h4>SC-900: Microsoft Security, Compliance, and Identity Fundamentals</h4><div class="icons"><a href="certificates/SC-900.png" target="_blank"><img src="certificate-icon.svg" alt="Certificate" class="icon"></a><a href="certificates/SC-900-Certificate.pdf" target="_blank"><img src="link-icon.svg" alt="Verify" class="link-icon"></a></div></div></div>
-        <div class="col-md-3"><div class="certificate-tile"><h4>AZ-900: Microsoft Azure Fundamentals</h4><div class="icons"><a href="certificates/AZ-900.png" target="_blank"><img src="certificate-icon.svg" alt="Certificate" class="icon"></a><a href="certificates/AZ-900-Certificate.pdf" target="_blank"><img src="link-icon.svg" alt="Verify" class="link-icon"></a></div></div></div>
-        <div class="col-md-3"><div class="certificate-tile"><h4>Introduction to Cybersecurity: Cisco Networking Academy</h4><div class="icons"><a href="certificates/cisco.png" target="_blank"><img src="certificate-icon.svg" alt="Certificate" class="icon"></a><a href="certificates/Intro to Cybersecurity-Cisco.pdf" target="_blank"><img src="link-icon.svg" alt="Verify" class="link-icon"></a></div></div></div>
-        <div class="col-md-3"><div class="certificate-tile"><h4>Ethical Hacking from Scratch: Zsecurity</h4><div class="icons"><a href="certificates/Zsecurity.png" target="_blank"><img src="certificate-icon.svg" alt="Certificate" class="icon"></a><a href="https://zsecurity.org/certification/validation/" target="_blank"><img src="link-icon.svg" alt="Verify" class="link-icon"></a></div></div></div>
-    </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects">
-    <h2>Projects</h2>
-    <p>A detective is only as good as their cases. Here's a glimpse at the investigations and analyses I've tackled:</p>
-
-    <!-- Row 1: 4 cards -->
-    <div class="project-row">
-        <div class="project-card">
-            <div class="project-card-inner">
-                <div class="project-card-front">
-                    <h3>PQC-DEMS: Post-Quantum Cryptographic Digital Evidence Management System</h3>
-                    <p>Built a forensic evidence management system secured with NIST post-quantum cryptographic algorithms to protect digital evidence against quantum threats.</p>
-                </div>
-                <div class="project-card-back">
-                    <h4>Mission Brief:</h4>
-                    <p>Implemented ML-KEM-768 and ML-DSA-65 with RBAC, JWT authentication, and a hash-chained audit log, benchmarked across file sizes up to 1GB showing ML-DSA-65 signature generation up to 68x faster than RSA.</p>
-                </div>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="project-card-inner">
-                <div class="project-card-front">
-                    <h3>Attack and Defend Exercise: Securing a Corporate Infrastructure</h3>
-                    <p>Built a corporate infrastructure with web, FTP, and Active Directory, conducting attacks and logging intrusions.</p>
-                </div>
-                <div class="project-card-back">
-                    <h4>Mission Brief:</h4>
-                    <p>Simulated exploitation of vulnerabilities like EternalBlue and BlueKeep, using Wazuh for intrusion detection and incident response.</p>
-                </div>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="project-card-inner">
-                <div class="project-card-front">
-                    <h3>Forensic Recovery of Web Browser Artifacts</h3>
-                    <p>Investigated how much digital evidence survives after manual deletion and private browsing across Chrome, Firefox, and Edge.</p>
-                </div>
-                <div class="project-card-back">
-                    <h4>Mission Brief:</h4>
-                    <p>Used FTK Imager, Autopsy, Volatility, and 15+ NirSoft tools to recover artifacts post-deletion, proving that manual browser clearing is insufficient for complete data eradication.</p>
-                </div>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="project-card-inner">
-                <div class="project-card-front">
-                    <h3>IDOTS+: Enhancing IoTDots for Smart Environments</h3>
-                    <p>Improvised an IoT forensics framework using CNNs to detect malicious activity in smart home environments.</p>
-                </div>
-                <div class="project-card-back">
-                    <h4>Mission Brief:</h4>
-                    <p>Achieved 89% accuracy in identifying threats using the OpenHAB platform.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Row 2: 4 cards -->
-    <div class="project-row">
-        <div class="project-card">
-            <div class="project-card-inner">
-                <div class="project-card-front">
-                    <h3>Detecting Deepfakes with Machine Learning</h3>
-                    <p>Developed a deep learning model using CNNs to detect Deepfake content utilizing spatiotemporal analysis and feature extraction.</p>
-                </div>
-                <div class="project-card-back">
-                    <h4>Mission Brief:</h4>
-                    <p>Achieved 83.9% accuracy in detecting fake images and videos by analyzing facial features and inconsistencies over time.</p>
-                </div>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="project-card-inner">
-                <div class="project-card-front">
-                    <h3>Legal Compliance Analysis for Breach Remediation</h3>
-                    <p>Analyzed a simulated data breach, identifying non-compliance with HIPAA, PCI DSS, GDPR, GLBA, and NYDFS.</p>
-                </div>
-                <div class="project-card-back">
-                    <h4>Mission Brief:</h4>
-                    <p>Applied the NIST Cybersecurity Framework (CSF) to propose actionable remediation strategies.</p>
-                </div>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="project-card-inner">
-                <div class="project-card-front">
-                    <h3>Threat Analysis: Cryptocurrency in Modern Social Engineering Attacks</h3>
-                    <p>Performed a research-oriented analysis of five major cryptocurrency scams, examining how anonymity and decentralization enabled social engineering fraud.</p>
-                </div>
-                <div class="project-card-back">
-                    <h4>Mission Brief:</h4>
-                    <p>Applied Cialdini's Influence Principles to uncover social engineering tactics and proposed security improvements.</p>
-                </div>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="project-card-inner">
-                <div class="project-card-front">
-                    <h3>The Quantum Periodic Cipher: Merging Elements and Quantum Numbers for Covert Channel</h3>
-                    <p>A covert communication method encoding messages in Reddit posts using elemental substitution and quantum numbers.</p>
-                </div>
-                <div class="project-card-back">
-                    <h4>Mission Brief:</h4>
-                    <p>The system hides messages within chemistry-related discussions, leveraging automation to post securely while avoiding detection.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Row 3: 2 cards centered -->
-    <div class="project-row project-row-center">
-        <div class="project-card">
-            <div class="project-card-inner">
-                <div class="project-card-front">
-                    <h3>Enhancing Digital Twin Security through Partial Homomorphic Encryption</h3>
-                    <p>Implemented the ElGamal cryptosystem to secure Digital Twin data while allowing secure computations.</p>
-                </div>
-                <div class="project-card-back">
-                    <h4>Mission Brief:</h4>
-                    <p>Built a proof-of-concept model integrating MATLAB and Jupyter Notebook for secure computations.</p>
-                </div>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="project-card-inner">
-                <div class="project-card-front">
-                    <h3>Survey & Analysis: Machine Learning in Modern Digital Forensics</h3>
-                    <p>Conducted a literature-backed survey evaluating how ML techniques address key challenges in digital forensics.</p>
-                </div>
-                <div class="project-card-back">
-                    <h4>Mission Brief:</h4>
-                    <p>Applied ML models like SVM, k-NN, and Naïve Bayes to enhance classification, anomaly detection, and real-time threat identification across various forensic domains.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Publication Section -->
-<section id="publication">
-    <h2>Publication</h2>
-    <p class="publication-intro"><em>Even the Dark Knight leaves behind a paper trail.</em></p>
-    <div class="publication-spotlight" id="publication-spotlight">
-        <div class="publication-card">
-            <div class="ieee-badge">IEEE<br>2025</div>
-            <p class="pub-title">ARTblock: Blockchain-Integrated AI for Real-Time Transaction Authenticity Verification in FinTech</p>
-            <p class="pub-conf">2025 International Conference on Electrical and Computer Engineering Researches (ICECER) &middot; Antananarivo, Madagascar</p>
-            <a class="pub-link" href="https://ieeexplore.ieee.org/document/11400953" target="_blank">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> View on IEEE Xplore
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- Competitions Section -->
-<section id="competitions">
-    <h2>Competitions</h2>
-    <p class="competition-intro">Before hitting the real cyber streets, every detective sharpens their skills in the training grounds. These competitions were my battle arenas—intense, tactical, and packed with challenges.</p>
-    <div class="row competitions-grid">
-        <div class="col-md-6" onclick="window.open('https://badgr.com/public/assertions/Oa_1BAfaQ0Gmh2sQsCgTIQ?identity__email=va7457@rit.edu', '_blank')">
-            <div class="competition-card">
-                <h4><strong>NCAE Cyber Games 2025</strong></h4>
-                <p>Finished 3<sup>rd</sup> among the top 12 teams from the East Overflow region</p>
-            </div>
-        </div>
-        <div class="col-md-6" onclick="window.open('certificates/Cyberseed.png', '_blank')">
-            <div class="competition-card">
-                <h4><strong>CyberSeed 2024 CTF</strong></h4>
-                <p>Finished 23<sup>rd</sup> among 160+ teams after completing 87% of challenges</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Experience Section -->
-<section id="experience">
-    <h2>Experience</h2>
-    <p>Every investigation leaves behind lessons. From securing enterprise systems to guiding future defenders in the classroom, these are the missions where security and identity came into play.</p>
-    <div class="experience-container">
-        <div class="timeline work-timeline">
-            <h3>Work Experience</h3>
-            <div class="timeline-item">
-                <div class="timeline-point"></div>
-                <div class="timeline-content">
-                    <h4>Identity and Access Management Intern – Rochester Regional Health</h4>
-                    <span>Aug 2025 – Present</span>
-                    <ul>
-                        <li>Process IAM service requests through Ivanti including verifying and executing password resets via Active Directory after confirming legitimacy with users and their managers</li>
-                        <li>Onboard and manage user, service, and vendor accounts in CyberArk PAM, configuring safes and permissions aligned with least-privilege access and supporting SailPoint identity governance implementation</li>
-                        <li>Develop PowerShell automation to monitor AD password reset events and notify affected users and maintain a C# IAM portal using Entity Framework and Azure DevOps</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-point"></div>
-                <div class="timeline-content">
-                    <h4>Associate / Programmer Analyst / Analyst Trainee – Cognizant Technology Solutions</h4>
-                    <span>Nov 2020 – Aug 2023</span>
-                    <ul>
-                        <li>Automated API and functional testing workflows using Selenium, improving efficiency and application reliability</li>
-                        <li>Developed and executed 50+ test cases per release, resolving critical defects with cross-team collaboration</li>
-                        <li>Mentored 5 new team members on testing workflows and tools to accelerate their onboarding and productivity</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="timeline teaching-timeline">
-            <h3>Academic Experience</h3>
-            <div class="timeline-item">
-                <div class="timeline-point"></div>
-                <div class="timeline-content">
-                    <h4>Teaching Assistant – Cryptography and Authentication</h4>
-                    <span>Aug 2024 – Dec 2024, Aug 2025 – Dec 2025</span>
-                    <ul>
-                        <li>Designed, graded, and reviewed programming assignments implementing cryptographic algorithms such as Substitution Cipher, RC4, A5/1, and MD5.</li>
-                        <li>Analyzed student cryptographic implementations to identify logical errors, insecure practices, and incorrect algorithm usage.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-point"></div>
-                <div class="timeline-content">
-                    <h4>Teaching Assistant – Introduction to Cybersecurity</h4>
-                    <span>Jan 2025 – Aug 2025</span>
-                    <ul>
-                        <li>Assisted 60+ students through hands-on assignments and group activities covering network security, risk management, access control, and system defense.</li>
-                        <li>Provided structured feedback on assignments related to security principles, compliance, and risk mitigation.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <footer class="text-center py-3">
-        <p>© 2026 Vijayavarman Arunasalam Harikrishnan. All Rights Reserved.</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <div class="terminal__out" role="log" aria-live="polite"></div>
+    <form class="terminal__form" autocomplete="off">
+      <label class="terminal__prompt" for="terminal-input">guest ~ $</label>
+      <input class="terminal__input" id="terminal-input" type="text" spellcheck="false" autocapitalize="off" enterkeyhint="send">
+    </form>
+  </dialog>
 </body>
 </html>

@@ -1,0 +1,28 @@
+/* Scroll transitions */
+
+/* Experience timeline */
+body.motion .timeline::after {
+  content: "";
+  position: absolute;
+  left: 12rem;
+  top: 0.6rem;
+  bottom: 0;
+  width: 1px;
+  background: var(--accent);
+  transform-origin: top;
+  transform: scaleY(var(--fill, 0));
+}
+body.motion .entry::before {
+  z-index: 1;
+  background: var(--bg);
+  border-color: var(--line-strong);
+  transition: background-color 250ms var(--ease), border-color 250ms var(--ease);
+}
+body.motion .entry.is-reached::before { background: var(--accent); border-color: var(--accent); }
+
+@media (max-width: 44rem) {
+  body.motion .timeline::after { left: 0.25rem; }
+}
+
+/* Overflow */
+main, .site-footer { overflow-x: clip; }
