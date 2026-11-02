@@ -70,7 +70,7 @@
           ['name', 'Vijayavarman'],
           ['education', 'MS Cybersecurity, RIT'],
           ['focus', 'identity governance, privileged access, blue team operations'],
-          ['next', 'INE Certified Cloud Associate (ICCA)'],
+          // ['next', 'INE Certified Cloud Associate (ICCA)'],
           ['status', 'open to full-time IAM, PAM, and SOC roles']
         ].forEach(function (r) {
           print('<span class="t-row"><span class="t-accent">' + r[0] + '</span><span>' + esc(r[1]) + '</span></span>');
